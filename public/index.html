@@ -40,16 +40,22 @@
                             <div class="col-3"><button class="btn btn-light calc-btn" onclick="append('6')">6</button></div>
                             <div class="col-3"><button class="btn btn-secondary calc-btn" onclick="append('+')">+</button></div>
                         </div>
+                        <!-- Nested row for bottom part to handle tall = button -->
                         <div class="row">
-                            <div class="col-3"><button class="btn btn-light calc-btn" onclick="append('1')">1</button></div>
-                            <div class="col-3"><button class="btn btn-light calc-btn" onclick="append('2')">2</button></div>
-                            <div class="col-3"><button class="btn btn-light calc-btn" onclick="append('3')">3</button></div>
-                            <div class="col-3"><button class="btn btn-primary calc-btn" style="height: 130px; margin-top: -70px; z-index: 10;" onclick="calculate()">=</button></div>
-                        </div>
-                        <div class="row" style="margin-top: -70px;">
-                            <div class="col-6"><button class="btn btn-light calc-btn" onclick="append('0')">0</button></div>
-                            <div class="col-3"><button class="btn btn-light calc-btn" onclick="append('.')">.</button></div>
-                            <div class="col-3"></div> <!-- Placeholder for big = button -->
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-4"><button class="btn btn-light calc-btn" onclick="append('1')">1</button></div>
+                                    <div class="col-4"><button class="btn btn-light calc-btn" onclick="append('2')">2</button></div>
+                                    <div class="col-4"><button class="btn btn-light calc-btn" onclick="append('3')">3</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8"><button class="btn btn-light calc-btn" onclick="append('0')">0</button></div>
+                                    <div class="col-4"><button class="btn btn-light calc-btn" onclick="append('.')">.</button></div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-primary calc-btn" style="height: 130px;" onclick="calculate()">=</button>
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer text-center text-muted">
