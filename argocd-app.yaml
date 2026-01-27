@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chuzone-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/firasmr997/chuzone-devops-app.git' # UPDATE THIS URL
+    targetRevision: HEAD
+    path: gitops
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: examen-26
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
