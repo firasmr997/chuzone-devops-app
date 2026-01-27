@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ${{ secrets.DOCKERHUB_USERNAME }}/chuzone-devops-app:1.0.0
+          image: firasmr997/chuzone-devops-app:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
