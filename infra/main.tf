@@ -111,9 +111,11 @@ resource "aws_security_group" "k8s_sg" {
   }
 }
 
+
+
 resource "aws_key_pair" "k8s_key" {
-  key_name   = "chuzone-key-fixed"
-  public_key = file("C:/Users/ron_f/.ssh/id_rsa.pub") 
+  key_name   = "labsuser"
+  public_key = file("${path.module}/../labsuser.pub") 
 }
 
 resource "aws_instance" "master" {

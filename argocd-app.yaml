@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/firasmr997/chuzone-devops-app.git' # UPDATE THIS URL
-    targetRevision: HEAD
+    repoURL: 'https://github.com/firasmr997/chuzone-devops-app.git'
+    targetRevision: main
     path: gitops
   destination:
     server: 'https://kubernetes.default.svc'
